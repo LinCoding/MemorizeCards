@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html land="en-us">
+  <head>
+    <meta charset="utf-8"> 
+    <title>Convert .NET code to JS code</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <h3></h3>
+      </div>
+      <div class="content">
+        <div class="action input-group">
+          <button id="generate-random" type="button" class="btn btn-default">Shuffle Cards</button>
+        </div>
+        <div class="card-region">
+          <button type="button" class="btn btn-default nav-arrow" id="left-button">
+            <span class="glyphicon glyphicon-circle-arrow-left nav-arrow-icon" aria-hidden="true"></span>
+          </button>
+          <div class="card-images">
+            <div class="show-holder card-view">
+            <img class="card-image" src="./images/back.png">
+            </div>
+            <div class="hide-card card-view" id="card-0">
+            <img class="card-image" src="./images/0.png">
+            </div>
+            <div class="hide-card card-view" id="card-1">
+            <img class="card-image" src="./images/1.png">
+            </div>
+            <div class="hide-card card-view" id="card-2">
+            <img class="card-image" src="./images/2.png">
+            </div>
+            <div class="hide-card card-view" id="card-3">
+            <img class="card-image" src="./images/3.png">
+            </div>
+            <div class="hide-card card-view" id="card-4">
+            <img class="card-image" src="./images/4.png">
+            </div>
+            <div class="hide-card card-view" id="card-5">
+            <img class="card-image" src="./images/5.png">
+            </div>
+            <div class="hide-card card-view" id="card-6">
+            <img class="card-image" src="./images/6.png">
+            </div>
+            <div class="hide-card card-view" id="card-7">
+            <img class="card-image" src="./images/7.png">
+            </div>
+            <div class="hide-card card-view" id="card-8">
+            <img class="card-image" src="./images/8.png">
+            </div>
+            <div class="hide-card card-view" id="card-9">
+            <img class="card-image" src="./images/9.png">
+            </div>
+            <div class="hide-card card-view" id="card-10">
+            <img class="card-image" src="./images/10.png">
+            </div>
+            <div class="hide-card card-view" id="card-11">
+            <img class="card-image" src="./images/11.png">
+            </div>
+            <div class="hide-card card-view" id="card-12">
+            <img class="card-image" src="./images/12.png">
+            </div>
+            <div class="hide-card card-view" id="card-13">
+            <img class="card-image" src="./images/13.png">
+            </div>
+            <div class="hide-card card-view" id="card-14">
+            <img class="card-image" src="./images/14.png">
+            </div>
+            <div class="hide-card card-view" id="card-15">
+            <img class="card-image" src="./images/15.png">
+            </div>
+            <div class="hide-card card-view" id="card-16">
+            <img class="card-image" src="./images/16.png">
+            </div>
+            <div class="hide-card card-view" id="card-17">
+            <img class="card-image" src="./images/17.png">
+            </div>
+            <div class="hide-card card-view" id="card-18">
+            <img class="card-image" src="./images/18.png">
+            </div>
+            <div class="hide-card card-view" id="card-19">
+            <img class="card-image" src="./images/19.png">
+            </div>
+            <div class="hide-card card-view" id="card-20">
+            <img class="card-image" src="./images/20.png">
+            </div>
+            <div class="hide-card card-view" id="card-21">
+            <img class="card-image" src="./images/21.png">
+            </div>
+            <div class="hide-card card-view" id="card-22">
+            <img class="card-image" src="./images/22.png">
+            </div>
+            <div class="hide-card card-view" id="card-23">
+            <img class="card-image" src="./images/23.png">
+            </div>
+            <div class="hide-card card-view" id="card-24">
+            <img class="card-image" src="./images/24.png">
+            </div>
+            <div class="hide-card card-view" id="card-25">
+            <img class="card-image" src="./images/25.png">
+            </div>
+            <div class="hide-card card-view" id="card-26">
+            <img class="card-image" src="./images/26.png">
+            </div>
+            <div class="hide-card card-view" id="card-27">
+            <img class="card-image" src="./images/27.png">
+            </div>
+            <div class="hide-card card-view" id="card-28">
+            <img class="card-image" src="./images/28.png">
+            </div>
+            <div class="hide-card card-view" id="card-29">
+            <img class="card-image" src="./images/29.png">
+            </div>
+            <div class="hide-card card-view" id="card-30">
+            <img class="card-image" src="./images/30.png">
+            </div>
+            <div class="hide-card card-view" id="card-31">
+            <img class="card-image" src="./images/31.png">
+            </div>
+            <div class="hide-card card-view" id="card-32">
+            <img class="card-image" src="./images/32.png">
+            </div>
+            <div class="hide-card card-view" id="card-33">
+            <img class="card-image" src="./images/33.png">
+            </div>
+            <div class="hide-card card-view" id="card-34">
+            <img class="card-image" src="./images/34.png">
+            </div>
+            <div class="hide-card card-view" id="card-35">
+            <img class="card-image" src="./images/35.png">
+            </div>
+            <div class="hide-card card-view" id="card-36">
+            <img class="card-image" src="./images/36.png">
+            </div>
+            <div class="hide-card card-view" id="card-37">
+            <img class="card-image" src="./images/37.png">
+            </div>
+            <div class="hide-card card-view" id="card-38">
+            <img class="card-image" src="./images/38.png">
+            </div>
+            <div class="hide-card card-view" id="card-39">
+            <img class="card-image" src="./images/39.png">
+            </div>
+            <div class="hide-card card-view" id="card-40">
+            <img class="card-image" src="./images/40.png">
+            </div>
+            <div class="hide-card card-view" id="card-41">
+            <img class="card-image" src="./images/41.png">
+            </div>
+            <div class="hide-card card-view" id="card-42">
+            <img class="card-image" src="./images/42.png">
+            </div>
+            <div class="hide-card card-view" id="card-43">
+            <img class="card-image" src="./images/43.png">
+            </div>
+            <div class="hide-card card-view" id="card-44">
+            <img class="card-image" src="./images/44.png">
+            </div>
+            <div class="hide-card card-view" id="card-45">
+            <img class="card-image" src="./images/45.png">
+            </div>
+            <div class="hide-card card-view" id="card-46">
+            <img class="card-image" src="./images/46.png">
+            </div>
+            <div class="hide-card card-view" id="card-47">
+            <img class="card-image" src="./images/47.png">
+            </div>
+            <div class="hide-card card-view" id="card-48">
+            <img class="card-image" src="./images/48.png">
+            </div>
+            <div class="hide-card card-view" id="card-49">
+            <img class="card-image" src="./images/49.png">
+            </div>
+            <div class="hide-card card-view" id="card-50">
+            <img class="card-image" src="./images/50.png">
+            </div>
+            <div class="hide-card card-view" id="card-51">
+            <img class="card-image" src="./images/51.png">
+            </div>
+          </div>
+          <button type="button" class="btn btn-default nav-arrow" id="right-button">
+            <span class="glyphicon glyphicon-circle-arrow-right nav-arrow-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
