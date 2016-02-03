@@ -9,14 +9,17 @@ $(document).ready(function(){
 			$(".hide-holder")[0].className = "show-holder card-view";
 			$(".show-card")[0].className = "hide-card card-view";
 			$('#generate-random')[0].textContent = "Shuffle Cards";
+			$('.show-go-to-card')[0].className = "col-lg-6 hide-go-to-card";
+			setCardNumberLabel(-1);
 			return;
 		}
 		$(".show-holder")[0].className = "hide-holder card-view";
 		shuffle(set);
 		var firstCard = "#card-" + set[0].toString();
 		$(firstCard)[0].className = "show-card card-view";
-		//$(firstCard)[0].textContent = set[0].toString();
 		$('#generate-random')[0].textContent = "Reset";
+		$('.hide-go-to-card')[0].className = "col-lg-6 show-go-to-card";
+		setCardNumberLabel(0);
 	});
 	
 	$("#left-button").click(function(e){
@@ -28,7 +31,7 @@ $(document).ready(function(){
 			$(".show-card")[0].className = "hide-card card-view";
 			var prevCardID = "#card-"+set[currCard-1].toString();
 			$(prevCardID)[0].className = "show-card card-view";
-			//$(prevCardID)[0].textContent = set[currCard-1].toString();
+			setCardNumberLabel(currCard-1);
 		}
 	});
 
@@ -41,7 +44,23 @@ $(document).ready(function(){
 			$(".show-card")[0].className = "hide-card card-view";
 			var nextCardID = "#card-"+set[currCard+1].toString();
 			$(nextCardID)[0].className = "show-card card-view";
-			//$(nextCardID)[0].textContent = set[currCard+1].toString();
+			setCardNumberLabel(currCard+1);
+		}
+	});
+
+	$("#go-to-card-button").click(function(e){
+		var cardNum = Number.parseInt($("#go-to-card-number")[0].value);
+		if (!Number.isNaN(cardNum) && cardNum >= 1 && cardNum <= 52){
+			var currCard = getCurrentCardNumber();
+			if(currCard === 52) {
+				return;
+			}
+			if(currCard<51){
+				$(".show-card")[0].className = "hide-card card-view";
+			}
+			var goToCardID = "#card-"+set[cardNum-1].toString();
+			$(goToCardID)[0].className = "show-card card-view";
+			setCardNumberLabel(cardNum-1);
 		}
 	});
 
@@ -68,6 +87,18 @@ function getCurrentCardNumber(){
 	}
 	var currCard = $(".show-card")[0];
 	return set.indexOf(Number.parseInt(currCard.id.substring(5)));
+}
+
+//cardNum is 0 based
+function setCardNumberLabel(cardNum){
+	var displayNum = cardNum + 1;
+	if(cardNum >=0 && cardNum <=51){
+		$(".card-number")[0].textContent = "" + displayNum + "/52"
+	}
+	else{
+		$(".card-number")[0].textContent = ""
+	}
+	
 }
 
 
