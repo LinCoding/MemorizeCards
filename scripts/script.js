@@ -55,7 +55,7 @@ $(document).ready(function(){
 			if(currCard === 52) {
 				return;
 			}
-			if(currCard<51){
+			if(currCard<=51 && currCard>=0){
 				$(".show-card")[0].className = "hide-card card-view";
 			}
 			var goToCardID = "#card-"+set[cardNum-1].toString();
